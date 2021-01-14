@@ -4,6 +4,7 @@ Library  String
 
 *** Variables ***
 ${WOOD_SAMPLE_XPATH_CHBX} =  //form[@id="holzprobenForm"]//input[@name="phases[]"][@value="XXX"]
+${WOOD_ALL_SAMPLES_XPATH_CHBX} =  //form[@id="holzprobenForm"]//input[@name="phases[]"]
 ${PRICE_OF_WOOD_SAMPLES_XPATH} =  //form[@id="holzprobenForm"]/aside//span[@id="price_of_wood_samples"]
 ${BUTTON_IN_DEN_WARENKORB_XPATH} =  //form[@id="holzprobenForm"]/aside/button[text()="In den Warenkorb"][@type="submit"]
 
@@ -15,6 +16,14 @@ Select sample
     wait until page contains element  ${final_xpath}
     click element  ${final_xpath}
     [Return]  ${final_xpath}
+
+Select all samples
+    [Documentation]  lorem ipsum
+    ${checkboxes} =  get webelements  ${WOOD_ALL_SAMPLES_XPATH_CHBX}
+    :FOR  ${checkbox}  IN  @{checkboxes}
+    \    click element  ${checkbox}
+
+
 
 Price check
     [Documentation]  Lorem ipsum
