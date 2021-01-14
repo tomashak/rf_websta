@@ -26,6 +26,7 @@ ID100 Objednat vzorky - pouze jeden
     OrderSamplePage.Order samples
     Cart1Page.Check cart1
     capture page screenshot  filename=Cart1Page.png
+    Cart1Page.Check price for samples  price_check=0.00 EUR
 
 
 ID101 Objednat vzorky - 5ks
@@ -44,6 +45,7 @@ ID101 Objednat vzorky - 5ks
     OrderSamplePage.Order samples
     Cart1Page.Check cart1
     capture page screenshot  filename=Cart1Page.png
+    Cart1Page.Check price for samples  price_check=3.00 EUR
 
 ID102 Objednat vsechny vzorky 33ks
     [Documentation]  ID100 Tento TC se pokusi objednat 5, cena bude 3 EUR
@@ -57,3 +59,4 @@ ID102 Objednat vsechny vzorky 33ks
     OrderSamplePage.Order samples
     Cart1Page.Check cart1
     capture page screenshot  filename=Cart1Page.png
+    Cart1Page.Check price for samples  price_check=102.00 EUR
